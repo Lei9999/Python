@@ -29,7 +29,7 @@ for i in range(3):
 file_name = input('\n答题已结束，请输入成绩单的文件名：')
 print('\n您的成绩已打印到成绩单中，请查看成绩单文件：{}'.format(file_name))
 
-if score/3 > 0.6:
+if score/3 >= 0.6:
     exam_result = ('PASS')
 else:
     exam_result = ('FAIL')
