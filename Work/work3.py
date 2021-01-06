@@ -7,20 +7,30 @@
 import random
 from random import sample
 
-questions = {'\n题目1\n\nA\nB\nC\nD\n',
-'\n题目2\n\nA\nB\nC\nD\n',
-'\n题目3\n\nA\nB\nC\nD\n',
-'\n题目4\n\nA\nB\nC\nD\n',
-'\n题目5\n\nA\nB\nC\nD\n'}
-correctanswer = {'A', 'C', 'D', 'A', 'B'}
-#len(questions)
-#print(len(questions))
-questions_list = list(questions)
-choice_id = sample([0, 1, 2, 3, 4], k=3)
-#print(choice_id)
+score = 0
+questions = {1: '\n题目1(单选题)\n\nA\nB\nC\nD\n',
+2: '\n题目2(单选题)\n\nA\nB\nC\nD\n',
+3: '\n题目3(单选题)\n\nA\nB\nC\nD\n',
+4: '\n题目4(单选题)\n\nA\nB\nC\nD\n',
+5: '\n题目5(单选题)\n\nA\nB\nC\nD\n'}
+correct_answer = {1: 'A', 2: 'B', 3: 'D', 4: 'A', 5: 'C'}
+id_list = sample([1, 2, 3, 4, 5], k=3)
+
 for i in range(3):
-    #print(i)
-    choice_index = choice_id[i]
-    #print('ID = ', a)
-    current_questions = questions_list[choice_index]
-    answer = input(current_questions + "\n请输入答案：")
+    index_key = id_list[i]
+    current_answer = input(questions[index_key] + '\n请输入答案：')
+    if current_answer == correct_answer[index_key]:
+        score = score + 1
+    else:
+        pass
+
+file_name = input('\n答题已结束，请输入成绩单的文件名：')
+print('\n您的成绩已打印到成绩单中，请查看成绩单文件：{}'.format(file_name))
+
+if score/3 > 0.6:
+    exam_result = ('PASS')
+else:
+    exam_result = ('FAIL')
+
+with open(file_name, mode='w', encoding='utf-8') as score_file:
+    score_file.write(exam_result)
