@@ -8,11 +8,13 @@ import random
 from random import sample
 
 score = 0
-questions = {1: '\n题目1(单选题)\n\nA\nB\nC\nD\n',
-2: '\n题目2(单选题)\n\nA\nB\nC\nD\n',
-3: '\n题目3(单选题)\n\nA\nB\nC\nD\n',
-4: '\n题目4(单选题)\n\nA\nB\nC\nD\n',
-5: '\n题目5(单选题)\n\nA\nB\nC\nD\n'}
+questions = {
+    1: '\n题目1(单选题)\n\nA\nB\nC\nD\n', 
+    2: '\n题目2(单选题)\n\nA\nB\nC\nD\n', 
+    3: '\n题目3(单选题)\n\nA\nB\nC\nD\n', 
+    4: '\n题目4(单选题)\n\nA\nB\nC\nD\n', 
+    5: '\n题目5(单选题)\n\nA\nB\nC\nD\n'
+}
 correct_answer = {1: 'A', 2: 'B', 3: 'D', 4: 'A', 5: 'C'}
 id_list = sample([1, 2, 3, 4, 5], k=3)
 
