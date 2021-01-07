@@ -11,7 +11,7 @@
 
 import os
 import paramiko
-from datetime import datetime
+from datetime import datetime, time
 
 input_devices_ip_tips = ("""
 请输入设备信息文件的UNC路径：
@@ -54,5 +54,8 @@ for devices_ip in devices_ip_list:
         + now_time
         + ".txt"
     )
+    time.sleep(5)
     with open(config_file_name, mode='w', encoding='utf-8') as w_cfg:
         w_cfg.write(stdout)
+    print('设备%s配置已保存完成' % (devices_ip))
+    ssh_client.close
