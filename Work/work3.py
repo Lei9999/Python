@@ -4,6 +4,7 @@
 # 并要求为每道题输入正确答案，正确率百分比大于等于60%输出结果pass，
 # 否则输出结果fail。将结果写入文件，文件名由答题者自定义。
 
+import os
 import random
 from random import sample
 
