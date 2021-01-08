@@ -68,7 +68,8 @@ for devices_ip in devices_ip_list:
     ssh_command.send('show running-config\n')
     time.sleep(3)
     output = ssh_command.recv(65535).decode('ascii')
-    
+    output = output[output.find('show running-config'):]  # 截取从"show running-config"开始到尾部
+
     #将得到的结果写入文件中
     with open(config_file_name, mode='a') as w_cfg:
         w_cfg.write(output)
