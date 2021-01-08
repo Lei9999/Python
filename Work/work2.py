@@ -53,7 +53,12 @@ for devices_ip in devices_ip_list:
     + ".txt"
     )
 
-    ssh_client.connect(hostname=devices_ip, username=ssh_username, password=ssh_password, look_for_keys=False)
+    ssh_client.connect(
+        hostname=devices_ip, 
+        username=ssh_username, 
+        password=ssh_password, 
+        look_for_keys=False
+        )
     ssh_command = ssh_client.invoke_shell()
 
     print('\n已成功登录设备' + devices_ip + '，正在保存配置，请稍等...')
