@@ -44,7 +44,7 @@ print("str12 =", str12)
 print("str13 =", str13)
 
 # 判断
-# 返回的值“True/False”
+# 返回的值 True/False
 str14 = "Hello, World"
 print("Hello" in str14)
 print("Hello1" in str14)
