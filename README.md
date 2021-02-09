@@ -1,2 +1,2 @@
-# EI-CCIE
-用于存储EI-CCIE学习中使用的Python代码
+# PYTHON
+用于存储学习Python的代码以及笔记
