@@ -101,10 +101,3 @@ while index < len(str1):
     while str1[index] == " ":
         index += 1
 print(count)
-
-
-
-
-
-
-

@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 
-'''
+"""
 编写一个py脚本，运行脚本，从一个五道选择题的题库中随机抽取三道题，
 并要求为每道题输入正确答案，正确率百分比大于等于60%输出结果pass，
 否则输出结果fail。将结果写入文件，文件名由答题者自定义。
-'''
+"""
 
 import os
 import random
@@ -33,9 +33,9 @@ file_name = input('\n答题已结束，请输入成绩单的文件名：')
 print('\n您的成绩已打印到成绩单中，请查看成绩单文件：{}'.format(file_name))
 
 if score/3 >= 0.6:
-    exam_result = ('PASS')
+    exam_result = 'PASS'
 else:
-    exam_result = ('FAIL')
+    exam_result = 'FAIL'
 
 with open(file_name, mode='w', encoding='utf-8') as score_file:
     score_file.write(exam_result)

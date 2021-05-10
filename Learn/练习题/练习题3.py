@@ -88,4 +88,3 @@ product = 1
 for n in listNum:
     product *= n
 print("这两个数的公约数为：{0}".format(product))
-

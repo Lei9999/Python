@@ -16,8 +16,8 @@ len_list_ospf = len(list_sh_ospf)  # 计算列表的长度
 traget = open(filename, 'w')
 traget.truncate  # 先把文件清空
 
-line1 = ("*** Printing show ip route ospf ***")
-line2 = ("*** Only Display OSPF O Route ***")
+line1 = "*** Printing show ip route ospf ***"
+line2 = "*** Only Display OSPF O Route ***"
 
 print('''
 %s

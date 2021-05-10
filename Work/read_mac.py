@@ -4,24 +4,24 @@ import os
 
 filepath = 'C:\\Users\\Lei\\Desktop\\MAC_List\\'  # 文件所在路径
 pathdir = os.listdir(filepath)  # 读取路径下的所有文件名并生成为列表
-#print(pathdir)
+# print(pathdir)
 # 循环依次打开每一个文件进行操作
 for filename in pathdir:
-    #print(filename)
+    # print(filename)
     openfile_name = filepath + filename
 
-    #read_mac_all = open(openfile_name, 'r')
-    #mac_list = read_mac_all.readlines()
+    # read_mac_all = open(openfile_name, 'r')
+    # mac_list = read_mac_all.readlines()
 
     # 打开文件将内容读取到列表中
     with open(openfile_name, 'r') as read_mac_all:
         mac_list = read_mac_all.readlines()
-    #print(mac_all.readlines())
+    # print(mac_all.readlines())
 
     list_index = 0  # 定义列表下标从0开始
     # 循环每一个列表元素
     for mac_line in mac_list:
-        #print(mac_line.strip())
+        # print(mac_line.strip())
         if ('Intel(R) Wi-Fi 6 AX200' in mac_line) is True:  # 如果列表元素中含有关键字则进行下列进行操作
             nic_name_index = mac_line.find(':')  # 找到冒号所在字符串的下标
             nic_name = mac_line[nic_name_index:]  # 截取从该下标开始往后的字符
