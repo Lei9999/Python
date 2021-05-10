@@ -9,4 +9,4 @@ def func(name: object, arr: object) -> object:
         print(x)
 
 
-func("Zhangzhe", "Shilei", "a")
+func("Zhangzhe", "Shilei")
