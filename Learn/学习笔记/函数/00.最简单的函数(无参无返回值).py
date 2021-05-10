@@ -4,5 +4,6 @@ def myPrint():
     print("Shilei is a nice man!")
     print("Shilei is a cool man!")
 
+
 # 调用函数
 myPrint()

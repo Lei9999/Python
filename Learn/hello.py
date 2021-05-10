@@ -8,7 +8,7 @@
 # file_dir = r'C:\Users\Lei\Desktop\192.168.0.1_20210107_20:37:32.txt'
 # with open(file_dir, mode='w', encoding='utf-8') as w_cfg:
 #    w_cfg.write("OK")
-input1 = input()
+inputFileName = input('请输入文件名：')
 # helloFile = open(input1, 'w')
-with open(input1, 'w') as target:
-    target.write('OK')
+with open(inputFileName, 'w') as target:
+    target.write('OK')  # 将“OK”写入文件中
