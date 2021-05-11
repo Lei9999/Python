@@ -3,10 +3,10 @@
 import os
 
 filepath = 'C:\\Users\\Lei\\Desktop\\MAC_List\\'  # 文件所在路径
-pathDir = os.listdir(filepath)  # 读取路径下的所有文件名并生成为列表
+filename_list = os.listdir(filepath)  # 读取路径下的所有文件名并生成为列表
 # print(pathDir)
 # 循环依次打开每一个文件进行操作
-for filename in pathDir:
+for filename in filename_list:
     # print(filename)
     openfile_name = filepath + filename
 
