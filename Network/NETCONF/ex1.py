@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import ncclient
 from ncclient import manager
 
 Host = ''
