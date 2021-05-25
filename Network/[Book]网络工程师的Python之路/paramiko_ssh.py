@@ -31,9 +31,9 @@ ssh_output = ssh_command.recv(65535).decode('ascii')
 ssh_client.close()
 
 # print(ssh_output)
-# 现在有一个问题，就是收到的东西也包括先前输入的命令，想办法给过滤掉
-# 只保留从"show running-config"开始
-
+"""
+现在有一个问题，就是收到的东西也包括先前输入的命令，想办法给过滤掉，只保留从"show running-config"开始
+"""
 output_index = ssh_output.find("show running-config")  # 找到第一次出现"show run"的下标
 print(output_index)  # 打印下标
 device_cfg = ssh_output[output_index:]  # 从给定下标处开始截取到结尾
